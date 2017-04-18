@@ -1,0 +1,7 @@
+{
+  "name": "r7.dnn.javascriptlibraries",
+  "devDependencies": {
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4"
+  }
+}

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0" DefaultTargets="ReactDOM">
+    <PropertyGroup>
+		<PackageName>ReactDOM</PackageName>
+    </PropertyGroup>
+	<ItemGroup>
+        <InstallIncludeFiles Include="../../node_modules/react-dom/dist/*.min.js" />
+        <InstallIncludeFiles Include="../../node_modules/react-dom/*.json" />
+        <InstallIncludeFiles Include="../../node_modules/react-dom/LICENSE" />
+        <InstallIncludeFiles Include="../../node_modules/react-dom/*.md" />
+    </ItemGroup>
+	<Import Project="../BuildSettings.targets" Condition=" '$(BuildSettingsImported)' == '' " />
+    <Import Project="../InstallPackage.targets" Condition=" '$(InstallPackageImported)' == '' " />
+	<Target Name="ReactDOM">
+	    <CallTarget Targets="InstallPackage" />
+	</Target>
+</Project>

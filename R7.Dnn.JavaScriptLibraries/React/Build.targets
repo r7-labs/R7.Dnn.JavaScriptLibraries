@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0" DefaultTargets="React">
+    <PropertyGroup>
+		<PackageName>React</PackageName>
+    </PropertyGroup>
+	<ItemGroup>
+        <InstallIncludeFiles Include="../../node_modules/react/dist/*.min.js" />
+        <InstallIncludeFiles Include="../../node_modules/react/*.json" />
+        <InstallIncludeFiles Include="../../node_modules/react/LICENSE" />
+        <InstallIncludeFiles Include="../../node_modules/react/*.md" />
+    </ItemGroup>
+	<Import Project="../BuildSettings.targets" Condition=" '$(BuildSettingsImported)' == '' " />
+	<Import Project="../InstallPackage.targets" Condition=" '$(InstallPackageImported)' == '' " />
+	<Target Name="React">
+	    <CallTarget Targets="InstallPackage" />
+	</Target>
+</Project>

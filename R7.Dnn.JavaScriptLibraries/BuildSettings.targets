@@ -1,0 +1,9 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+    <Import Project="../packages/MSBuildTasks.1.5.0.235/tools/MSBuild.Community.Tasks.Targets" />
+    <PropertyGroup>
+		<!-- Paths are relative to the package folder -->
+        <PackageOutputPath>../bin/Deploy</PackageOutputPath>
+        <TmpDir>../bin/tmp</TmpDir>
+        <BuildSettingsImported>true</BuildSettingsImported>
+    </PropertyGroup>
+</Project>
