@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <dotnetnuke type="Package" version="5.0">
 	<packages>
-		<package name="React" type="JavaScript_Library" version="15.05.00">
+		<package name="React" type="JavaScript_Library" version="15.05.04">
 			<friendlyName>React</friendlyName>
 			<description>A JavaScript library for building user interfaces</description>
 			<owner>
@@ -18,13 +18,13 @@
 						<libraryName>React</libraryName>
 						<fileName>react.min.js</fileName>
 						<preferredScriptLocation>PageHead</preferredScriptLocation>
-						<CDNPath>https://unpkg.com/react@latest/dist/react.js</CDNPath>
+						<CDNPath>https://unpkg.com/react@15.5.4/dist/react.js</CDNPath>
 						<objectName>React</objectName>
 					</javaScriptLibrary>
 				</component>
                 <component type="ResourceFile">
 					<resourceFiles>
-						<basePath>Resources\Libraries\React\15_05_00</basePath>
+						<basePath>Resources\Libraries\React\15_05_04</basePath>
 						<resourceFile>
 							<name>Resources.zip</name>
 						</resourceFile>
