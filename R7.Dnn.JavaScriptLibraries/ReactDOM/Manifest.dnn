@@ -18,7 +18,7 @@
 						<libraryName>ReactDOM</libraryName>
 						<fileName>react-dom.min.js</fileName>
 						<preferredScriptLocation>PageHead</preferredScriptLocation>
-						<CDNPath />
+						<CDNPath>https://unpkg.com/react-dom@latest/dist/react-dom.js</CDNPath>
 						<objectName>ReactDOM</objectName>
 					</javaScriptLibrary>
 				</component>

@@ -18,7 +18,7 @@
 						<libraryName>React</libraryName>
 						<fileName>react.min.js</fileName>
 						<preferredScriptLocation>PageHead</preferredScriptLocation>
-						<CDNPath />
+						<CDNPath>https://unpkg.com/react@latest/dist/react.js</CDNPath>
 						<objectName>React</objectName>
 					</javaScriptLibrary>
 				</component>
