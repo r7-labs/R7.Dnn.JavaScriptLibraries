@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0" DefaultTargets="BlueimpGallery">
+    <PropertyGroup>
+		<PackageName>BlueimpGallery</PackageName>
+		<IncludeBasePath>$(MSBuildProjectDirectory)/../../node_modules/blueimp-gallery</IncludeBasePath>
+    </PropertyGroup>
+	<ItemGroup>
+        <InstallIncludeFiles Include="$(IncludeBasePath)\**\*.min.js" />
+		<InstallIncludeFiles Include="$(IncludeBasePath)\**\*.min.js.map" />
+		<InstallIncludeFiles Include="$(IncludeBasePath)\**\*.min.css" />
+		<InstallIncludeFiles Include="$(IncludeBasePath)\**\*.min.css.map" />
+		<InstallIncludeFiles Include="$(IncludeBasePath)\**\*.png" />
+		<InstallIncludeFiles Include="$(IncludeBasePath)\**\*.svg" />
+        <InstallIncludeFiles Include="$(IncludeBasePath)\*.json" />
+        <InstallIncludeFiles Include="$(IncludeBasePath)\*.txt" />
+        <InstallIncludeFiles Include="$(IncludeBasePath)\*.md" />
+    </ItemGroup>
+	<Import Project="../BuildSettings.targets" Condition=" '$(BuildSettingsImported)' == '' " />
+	<Import Project="../InstallPackage.targets" Condition=" '$(InstallPackageImported)' == '' " />
+	<Target Name="BlueimpGallery">
+	    <CallTarget Targets="InstallPackage" />
+	</Target>
+</Project>
