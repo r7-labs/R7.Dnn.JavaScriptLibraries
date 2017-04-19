@@ -2,8 +2,8 @@
 <dotnetnuke type="Package" version="5.0">
 	<packages>
 		<package name="BlueimpGallery" type="JavaScript_Library" version="02.25.00">
-			<friendlyName>blueimp Gallery</friendlyName>
-			<description>A touch-enabled, responsive and customizable image &amp; video gallery, carousel and lightbox, optimized for both mobile and desktop web browsers</description>
+			<friendlyName>blueimp Gallery JavaScript Library</friendlyName>
+			<description>A touch-enabled, responsive and customizable image &amp; video gallery, carousel and lightbox, optimized for both mobile and desktop web browsers.</description>
 			<owner>
 				<name>Sebastian Tschan</name>
 				<organization>blueimp.net</organization>

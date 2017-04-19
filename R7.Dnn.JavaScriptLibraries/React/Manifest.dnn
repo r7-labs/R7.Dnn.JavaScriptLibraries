@@ -2,8 +2,8 @@
 <dotnetnuke type="Package" version="5.0">
 	<packages>
 		<package name="React" type="JavaScript_Library" version="15.05.04">
-			<friendlyName>React</friendlyName>
-			<description>A JavaScript library for building user interfaces</description>
+			<friendlyName>React JavaScript Library</friendlyName>
+			<description>A JavaScript library for building user interfaces.</description>
 			<owner>
 				<name />
 				<organization>Facebook</organization>

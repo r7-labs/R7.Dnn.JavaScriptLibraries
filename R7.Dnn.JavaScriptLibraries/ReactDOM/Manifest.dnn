@@ -2,8 +2,8 @@
 <dotnetnuke type="Package" version="5.0">
 	<packages>
 		<package name="ReactDOM" type="JavaScript_Library" version="15.05.04">
-			<friendlyName>ReactDOM</friendlyName>
-			<description>A JavaScript library for building user interfaces</description>
+			<friendlyName>ReactDOM JavaScript Library</friendlyName>
+			<description>A JavaScript library for building user interfaces.</description>
 			<owner>
 				<name />
 				<organization>Facebook</organization>
