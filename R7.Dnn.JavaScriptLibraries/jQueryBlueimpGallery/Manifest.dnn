@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<dotnetnuke type="Package" version="5.0">
+	<packages>
+		<package name="jQuery-BlueimpGallery" type="JavaScript_Library" version="02.25.00">
+			<friendlyName>blueimp Gallery JavaScript Library (jQuery plugin)</friendlyName>
+			<description>A touch-enabled, responsive and customizable image &amp; video gallery, carousel and lightbox, optimized for both mobile and desktop web browsers.</description>
+			<owner>
+				<name>Sebastian Tschan</name>
+				<organization>blueimp.net</organization>
+				<url>https://github.com/blueimp/Gallery</url>
+				<email>mail@blueimp.net</email>
+			</owner>
+			<license>https://github.com/blueimp/Gallery/blob/master/LICENSE.txt</license>
+			<releaseNotes>https://github.com/blueimp/Gallery/releases/tag/v2.25.0</releaseNotes>
+			<components>
+				<component type="JavaScript_Library">
+					<javaScriptLibrary>
+						<libraryName>jQuery-BlueimpGallery</libraryName>
+						<fileName>js/jquery.blueimp-gallery.min.js</fileName>
+						<preferredScriptLocation>BodyBottom</preferredScriptLocation>
+						<CDNPath>https://cdnjs.cloudflare.com/ajax/libs/blueimp-gallery/2.25.0/js/jquery.blueimp-gallery.min.js</CDNPath>
+						<objectName />
+					</javaScriptLibrary>
+				</component>
+                <component type="ResourceFile">
+					<resourceFiles>
+						<basePath>Resources\Libraries\jQuery-BlueimpGallery\02_25_00</basePath>
+						<resourceFile>
+							<name>Resources.zip</name>
+						</resourceFile>
+					</resourceFiles>
+				</component>
+			</components>
+		</package>
+	</packages>
+</dotnetnuke>

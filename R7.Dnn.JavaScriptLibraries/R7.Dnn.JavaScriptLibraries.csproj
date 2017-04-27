@@ -36,6 +36,7 @@
     <Folder Include="React\" />
     <Folder Include="ReactDOM\" />
     <Folder Include="BlueimpGallery\" />
+    <Folder Include="jQueryBlueimpGallery\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="React\Manifest.dnn" />
@@ -48,10 +49,13 @@
     <None Include="ReactDOM\Build.targets" />
     <None Include="BlueimpGallery\Manifest.dnn" />
     <None Include="BlueimpGallery\Build.targets" />
+    <None Include="jQueryBlueimpGallery\Build.targets" />
+    <None Include="jQueryBlueimpGallery\Manifest.dnn" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="BlueimpGallery/Build.targets" />
+  <Import Project="jQueryBlueimpGallery/Build.targets" />
   <Import Project="React/Build.targets" />
   <Import Project="ReactDOM/Build.targets" />
-  <Target Name="AfterBuild" DependsOnTargets="BlueimpGallery;React;ReactDOM" />
+  <Target Name="AfterBuild" DependsOnTargets="BlueimpGallery;jQueryBlueimpGallery;React;ReactDOM" />
 </Project>
