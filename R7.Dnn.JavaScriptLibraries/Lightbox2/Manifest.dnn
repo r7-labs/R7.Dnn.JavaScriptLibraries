@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<dotnetnuke type="Package" version="5.0">
+	<packages>
+		<package name="Lightbox2" type="JavaScript_Library" version="02.09.00">
+			<friendlyName>Lightbox2 Javascript Library</friendlyName>
+			<description>The original lightbox script. Eight years later - still going strong!</description>
+			<owner>
+				<name>Lokesh Dhakar</name>
+				<organization />
+				<url>http://lokeshdhakar.com/projects/lightbox2/</url>
+				<email>lokesh.dhakar@gmail.com</email>
+			</owner>
+			<license>https://github.com/lokesh/lightbox2/blob/master/LICENSE</license>
+			<releaseNotes>https://github.com/lokesh/lightbox2/releases/tag/v2.9.0</releaseNotes>
+			<components>
+				<component type="JavaScript_Library">
+					<javaScriptLibrary>
+						<libraryName>Lightbox2</libraryName>
+						<fileName>js/lightbox.min.js</fileName>
+						<preferredScriptLocation>BodyBottom</preferredScriptLocation>
+						<CDNPath>https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.9.0/js/lightbox.min.js</CDNPath>
+						<objectName>lightbox</objectName>
+					</javaScriptLibrary>
+				</component>
+                <component type="ResourceFile">
+					<resourceFiles>
+						<basePath>Resources\Libraries\Lightbox2\02_09_00</basePath>
+						<resourceFile>
+							<name>Resources.zip</name>
+						</resourceFile>
+					</resourceFiles>
+				</component>
+			</components>
+		</package>
+	</packages>
+</dotnetnuke>

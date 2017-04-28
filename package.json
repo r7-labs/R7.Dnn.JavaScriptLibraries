@@ -2,6 +2,7 @@
   "name": "r7.dnn.javascriptlibraries",
   "devDependencies": {
     "blueimp-gallery": "^2.25.0",
+    "lightbox2": "^2.9.0",
     "react": "^15.5.4",
     "react-dom": "^15.5.4"
   }
