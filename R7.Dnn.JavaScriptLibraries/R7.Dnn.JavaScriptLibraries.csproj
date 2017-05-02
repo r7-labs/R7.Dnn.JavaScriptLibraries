@@ -38,6 +38,7 @@
     <Folder Include="BlueimpGallery\" />
     <Folder Include="jQueryBlueimpGallery\" />
     <Folder Include="Lightbox2\" />
+    <Folder Include="Colorbox\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="React\Manifest.dnn" />
@@ -54,12 +55,15 @@
     <None Include="jQueryBlueimpGallery\Manifest.dnn" />
     <None Include="Lightbox2\Build.targets" />
     <None Include="Lightbox2\Manifest.dnn" />
+    <None Include="Colorbox\Build.targets" />
+    <None Include="Colorbox\Manifest.dnn" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="BlueimpGallery/Build.targets" />
   <Import Project="jQueryBlueimpGallery/Build.targets" />
   <Import Project="Lightbox2/Build.targets" />
+  <Import Project="Colorbox/Build.targets" />
   <Import Project="React/Build.targets" />
   <Import Project="ReactDOM/Build.targets" />
-  <Target Name="AfterBuild" DependsOnTargets="BlueimpGallery;jQueryBlueimpGallery;Lightbox2;React;ReactDOM" />
+  <Target Name="AfterBuild" DependsOnTargets="BlueimpGallery;jQueryBlueimpGallery;Lightbox2;Colorbox;React;ReactDOM" />
 </Project>

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0" DefaultTargets="Colorbox">
+    <PropertyGroup>
+		<PackageName>Colorbox</PackageName>
+		<IncludeBasePath>$(MSBuildProjectDirectory)/../../node_modules/jquery-colorbox</IncludeBasePath>
+    </PropertyGroup>
+	<ItemGroup>
+        <InstallIncludeFiles Include="$(IncludeBasePath)\*-min.js" />
+		<InstallIncludeFiles Include="$(IncludeBasePath)\**\i18n\*.js" />
+		<InstallIncludeFiles Include="$(IncludeBasePath)\**\*.css" />
+        <InstallIncludeFiles Include="$(IncludeBasePath)\**\*.png" />
+		<InstallIncludeFiles Include="$(IncludeBasePath)\**\*.gif" />
+        <InstallIncludeFiles Include="$(IncludeBasePath)\*.json" />
+        <InstallIncludeFiles Include="$(IncludeBasePath)\*.md" />
+    </ItemGroup>
+	<Import Project="../BuildSettings.targets" Condition=" '$(BuildSettingsImported)' == '' " />
+	<Import Project="../InstallPackage.targets" Condition=" '$(InstallPackageImported)' == '' " />
+	<Target Name="Colorbox">
+	    <CallTarget Targets="InstallPackage" />
+	</Target>
+</Project>

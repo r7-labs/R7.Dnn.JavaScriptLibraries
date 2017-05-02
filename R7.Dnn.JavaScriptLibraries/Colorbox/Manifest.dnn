@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<dotnetnuke type="Package" version="5.0">
+	<packages>
+		<package name="Colorbox" type="JavaScript_Library" version="01.06.04">
+			<friendlyName>Colorbox Javascript Library</friendlyName>
+			<description>A light-weight, customizable lightbox plugin for jQuery.</description>
+			<owner>
+				<name>Jack Moore</name>
+				<organization />
+				<url>https://github.com/jackmoore/colorbox/</url>
+				<email>hello@jacklmoore.com</email>
+			</owner>
+			<license>https://github.com/jackmoore/colorbox/blob/master/LICENSE.md</license>
+			<releaseNotes>https://github.com/jackmoore/colorbox#changelog</releaseNotes>
+			<components>
+				<component type="JavaScript_Library">
+					<javaScriptLibrary>
+						<libraryName>Colorbox</libraryName>
+						<fileName>jquery.colorbox-min.js</fileName>
+						<preferredScriptLocation>BodyBottom</preferredScriptLocation>
+						<CDNPath>https://cdnjs.cloudflare.com/ajax/libs/jquery.colorbox/1.6.4/jquery.colorbox-min.js</CDNPath>
+						<objectName>colorbox</objectName>
+					</javaScriptLibrary>
+				</component>
+                <component type="ResourceFile">
+					<resourceFiles>
+						<basePath>Resources\Libraries\Colorbox\01_06_04</basePath>
+						<resourceFile>
+							<name>Resources.zip</name>
+						</resourceFile>
+					</resourceFiles>
+				</component>
+			</components>
+		</package>
+	</packages>
+</dotnetnuke>
