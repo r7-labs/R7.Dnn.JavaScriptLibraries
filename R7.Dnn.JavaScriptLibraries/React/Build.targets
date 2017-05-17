@@ -4,10 +4,10 @@
 		<PackageName>React</PackageName>
     </PropertyGroup>
 	<ItemGroup>
-        <InstallIncludeFiles Include="../../node_modules/react/dist/*.min.js" />
-        <InstallIncludeFiles Include="../../node_modules/react/*.json" />
-        <InstallIncludeFiles Include="../../node_modules/react/LICENSE" />
-        <InstallIncludeFiles Include="../../node_modules/react/*.md" />
+        <InstallIncludeFiles Include="$(MSBuildProjectDirectory)/../../../node_modules/react/dist/*.min.js" />
+        <InstallIncludeFiles Include="$(MSBuildProjectDirectory)/../../node_modules/react/*.json" />
+        <InstallIncludeFiles Include="$(MSBuildProjectDirectory)/../../node_modules/react/LICENSE" />
+        <InstallIncludeFiles Include="$(MSBuildProjectDirectory)/../../node_modules/react/*.md" />
     </ItemGroup>
 	<Import Project="../BuildSettings.targets" Condition=" '$(BuildSettingsImported)' == '' " />
 	<Import Project="../InstallPackage.targets" Condition=" '$(InstallPackageImported)' == '' " />
