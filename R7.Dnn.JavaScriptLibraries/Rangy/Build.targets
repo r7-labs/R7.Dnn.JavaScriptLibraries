@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0" DefaultTargets="Rangy">
+    <PropertyGroup>
+		<PackageName>Rangy</PackageName>
+    </PropertyGroup>
+	<ItemGroup>
+        <InstallIncludeFiles Include="$(MSBuildProjectDirectory)/../../bower_components/rangy/*.min.js" />
+        <InstallIncludeFiles Include="$(MSBuildProjectDirectory)/../../bower_components/rangy/*.json" />
+        <InstallIncludeFiles Include="$(MSBuildProjectDirectory)/../../bower_components/rangy/LICENSE" />
+        <InstallIncludeFiles Include="$(MSBuildProjectDirectory)/../../bower_components/rangy/*.md" />
+    </ItemGroup>
+	<Import Project="../BuildSettings.targets" Condition=" '$(BuildSettingsImported)' == '' " />
+	<Import Project="../InstallPackage.targets" Condition=" '$(InstallPackageImported)' == '' " />
+	<Target Name="Rangy">
+	    <CallTarget Targets="InstallPackage" />
+	</Target>
+</Project>

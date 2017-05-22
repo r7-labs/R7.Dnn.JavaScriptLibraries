@@ -3,7 +3,6 @@
 bin/
 obj/
 
-packages/
-node_modules/
-bower_components/
-
+/packages/
+/node_modules/
+/bower_components/

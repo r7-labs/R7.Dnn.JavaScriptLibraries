@@ -1,0 +1,6 @@
+{
+  "name": "r7.dnn.javascriptlibraries",
+  "devDependencies": {
+    "rangy": "^1.3.0"
+  }
+}

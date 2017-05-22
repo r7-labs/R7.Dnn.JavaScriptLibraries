@@ -39,6 +39,7 @@
     <Folder Include="jQueryBlueimpGallery\" />
     <Folder Include="Lightbox2\" />
     <Folder Include="Colorbox\" />
+    <Folder Include="Rangy\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="React\Manifest.dnn" />
@@ -57,6 +58,8 @@
     <None Include="Lightbox2\Manifest.dnn" />
     <None Include="Colorbox\Build.targets" />
     <None Include="Colorbox\Manifest.dnn" />
+    <None Include="Rangy\Build.targets" />
+    <None Include="Rangy\Manifest.dnn" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="BlueimpGallery/Build.targets" />
@@ -65,5 +68,6 @@
   <Import Project="Colorbox/Build.targets" />
   <Import Project="React/Build.targets" />
   <Import Project="ReactDOM/Build.targets" />
-  <Target Name="AfterBuild" DependsOnTargets="BlueimpGallery;jQueryBlueimpGallery;Lightbox2;Colorbox;React;ReactDOM" />
+  <Import Project="Rangy/Build.targets" />
+  <Target Name="AfterBuild" DependsOnTargets="BlueimpGallery;jQueryBlueimpGallery;Lightbox2;Colorbox;React;ReactDOM;Rangy" />
 </Project>
