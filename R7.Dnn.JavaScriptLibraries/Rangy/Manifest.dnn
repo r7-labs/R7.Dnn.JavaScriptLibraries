@@ -17,7 +17,7 @@
 					<javaScriptLibrary>
                         <libraryName>Rangy</libraryName>
                         <fileName>rangy-core.min.js</fileName>
-                        <preferredScriptLocation>PageHead</preferredScriptLocation>
+                        <preferredScriptLocation>BodyBottom</preferredScriptLocation>
                         <CDNPath>https://cdnjs.cloudflare.com/ajax/libs/rangy/1.3.0/rangy-core.min.js</CDNPath>
                         <objectName>rangy</objectName>
                     </javaScriptLibrary>
