@@ -1,7 +1,7 @@
 {
   "name": "r7.dnn.javascriptlibraries",
   "devDependencies": {
-    "blueimp-gallery": "^2.25.0",
+    "blueimp-gallery": "^2.25.2",
     "jquery-colorbox": "^1.6.4",
     "lazyad-loader": "git+https://github.com/madgex/lazy-ads.git",
     "lightbox2": "^2.9.0",
