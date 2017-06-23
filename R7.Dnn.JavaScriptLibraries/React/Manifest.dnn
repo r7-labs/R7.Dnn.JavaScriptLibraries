@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <dotnetnuke type="Package" version="5.0">
 	<packages>
-		<package name="React" type="JavaScript_Library" version="15.05.04">
+		<package name="React" type="JavaScript_Library" version="15.06.01">
 			<friendlyName>React JavaScript Library</friendlyName>
 			<description>A JavaScript library for building user interfaces.</description>
 			<owner>
@@ -11,20 +11,20 @@
 				<email />
 			</owner>
 			<license>https://github.com/facebook/react/blob/master/LICENSE</license>
-			<releaseNotes>https://github.com/facebook/react/releases/tag/v15.5.0</releaseNotes>
+			<releaseNotes>https://github.com/facebook/react/releases/tag/v15.6.1</releaseNotes>
 			<components>
 				<component type="JavaScript_Library">
 					<javaScriptLibrary>
 						<libraryName>React</libraryName>
 						<fileName>react.min.js</fileName>
 						<preferredScriptLocation>PageHead</preferredScriptLocation>
-						<CDNPath>https://unpkg.com/react@15.5.4/dist/react.js</CDNPath>
+						<CDNPath>https://unpkg.com/react@15.6.1/dist/react.js</CDNPath>
 						<objectName>React</objectName>
 					</javaScriptLibrary>
 				</component>
                 <component type="ResourceFile">
 					<resourceFiles>
-						<basePath>Resources\Libraries\React\15_05_04</basePath>
+						<basePath>Resources\Libraries\React\15_06_01</basePath>
 						<resourceFile>
 							<name>Resources.zip</name>
 						</resourceFile>
