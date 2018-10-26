@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <dotnetnuke type="Package" version="5.0">
 	<packages>
-		<package name="LazyAds" type="JavaScript_Library" version="01.01.10">
+		<package name="LazyAds" type="JavaScript_Library" version="01.01.12">
 			<friendlyName>LazyAds JavaScript Library</friendlyName>
 			<description>Deliver synchronous ads asynchronously, without modifying the ad code.
 			Also, conditionally load ads for responsive websites using a media query or the ad container's dimensions.</description>
@@ -12,20 +12,20 @@
                 <email />
             </owner>
 			<license>https://github.com/madgex/lazy-ads/blob/master/LICENSE</license>
-			<releaseNotes>https://github.com/madgex/lazy-ads/releases/tag/1.1.10</releaseNotes>
+			<releaseNotes>https://github.com/madgex/lazy-ads/releases/tag/1.1.12</releaseNotes>
 			<components>
 				<component type="JavaScript_Library">
 					<javaScriptLibrary>
                         <libraryName>LazyAds</libraryName>
                         <fileName>lazyad-loader.min.js</fileName>
                         <preferredScriptLocation>BodyBottom</preferredScriptLocation>
-                        <CDNPath>https://cdnjs.cloudflare.com/ajax/libs/lazyad-loader/1.1.10/lazyad-loader.min.js</CDNPath>
+                        <CDNPath>https://cdnjs.cloudflare.com/ajax/libs/lazyad-loader/1.1.11/lazyad-loader.min.js</CDNPath>
                         <objectName>LazyAds</objectName>
                     </javaScriptLibrary>
 				</component>
                 <component type="ResourceFile">
 					<resourceFiles>
-						<basePath>Resources\Libraries\LazyAds\01_01_10</basePath>
+						<basePath>Resources\Libraries\LazyAds\01_01_12</basePath>
 						<resourceFile>
 							<name>Resources.zip</name>
 						</resourceFile>

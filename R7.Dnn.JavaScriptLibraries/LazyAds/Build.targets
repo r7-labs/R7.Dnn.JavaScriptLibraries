@@ -4,7 +4,7 @@
 	<Target Name="LazyAds">
 		<PropertyGroup>
 			<PackageName>LazyAds</PackageName>
-			<IncludeBasePath>$(MSBuildProjectDirectory)/../node_modules/lazyad-loader</IncludeBasePath>
+			<IncludeBasePath>$(MSBuildProjectDirectory)/../node_modules/lazy-ads</IncludeBasePath>
 		</PropertyGroup>
 		<ItemGroup>
 			<LazyAdsIncludeFiles Include="$(IncludeBasePath)/dist/*.min.js" />
