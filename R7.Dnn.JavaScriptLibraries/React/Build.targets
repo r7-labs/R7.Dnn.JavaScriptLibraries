@@ -7,7 +7,7 @@
 			<IncludeBasePath>$(MSBuildProjectDirectory)/../node_modules/react</IncludeBasePath>
 		</PropertyGroup>
 		<ItemGroup>
-			<ReactIncludeFiles Include="$(IncludeBasePath)/dist/*.min.js" />
+			<ReactIncludeFiles Include="$(IncludeBasePath)/cjs/*.js" />
 			<ReactIncludeFiles Include="$(IncludeBasePath)/*.json" />
 			<ReactIncludeFiles Include="$(IncludeBasePath)/LICENSE" />
 			<ReactIncludeFiles Include="$(IncludeBasePath)/*.md" />

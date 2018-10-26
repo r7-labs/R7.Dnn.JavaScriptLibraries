@@ -5,7 +5,7 @@
     "jquery-colorbox": "^1.6.4",
     "lazy-ads": "^1.1.12",
     "lightbox2": "^2.9.0",
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1"
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0"
   }
 }
