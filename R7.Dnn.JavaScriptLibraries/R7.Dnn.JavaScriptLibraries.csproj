@@ -8,6 +8,10 @@
     <PackageReference Include="MSBuildTasks" Version="1.5.0.235" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="R7.Dnn.JavaScriptLibraries.csproj" />
+  </ItemGroup>
+	
   <Import Project="BlueimpGallery/Build.targets" />
   <Import Project="jQueryBlueimpGallery/Build.targets" />
   <Import Project="Lightbox2/Build.targets" />
