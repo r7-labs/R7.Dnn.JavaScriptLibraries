@@ -12,6 +12,7 @@
 			<BlueimpGalleryIncludeFiles Include="$(IncludeBasePath)/**/*.min.css" />
 			<BlueimpGalleryIncludeFiles Include="$(IncludeBasePath)/**/*.min.css.map" />
 			<BlueimpGalleryIncludeFiles Include="$(IncludeBasePath)/**/*.png" />
+			<BlueimpGalleryIncludeFiles Include="$(IncludeBasePath)/**/*.gif" />
 			<BlueimpGalleryIncludeFiles Include="$(IncludeBasePath)/**/*.svg" />
 			<BlueimpGalleryIncludeFiles Include="$(IncludeBasePath)/*.json" />
 			<BlueimpGalleryIncludeFiles Include="$(IncludeBasePath)/*.txt" />

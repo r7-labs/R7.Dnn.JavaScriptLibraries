@@ -9,6 +9,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="jQueryBlueimpGallery\Build.targets" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="R7.Dnn.JavaScriptLibraries.csproj" />
   </ItemGroup>
 	
