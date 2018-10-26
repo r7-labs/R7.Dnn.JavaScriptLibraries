@@ -1,70 +1,13 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project Sdk="Microsoft.NET.Sdk">
+
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{33BF1026-0EE9-461A-A408-0D36BFEA3511}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <RootNamespace>R7.Dnn.JavaScriptLibraries</RootNamespace>
-    <AssemblyName>R7.Dnn.JavaScriptLibraries</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug</OutputPath>
-    <DefineConstants>DEBUG;</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <ConsolePause>false</ConsolePause>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release</OutputPath>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <ConsolePause>false</ConsolePause>
-  </PropertyGroup>
+
   <ItemGroup>
-    <Reference Include="System" />
+    <PackageReference Include="MSBuildTasks" Version="1.5.0.235" />
   </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Dummy.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="React\" />
-    <Folder Include="ReactDOM\" />
-    <Folder Include="BlueimpGallery\" />
-    <Folder Include="jQueryBlueimpGallery\" />
-    <Folder Include="Lightbox2\" />
-    <Folder Include="Colorbox\" />
-    <Folder Include="Rangy\" />
-    <Folder Include="LazyAds\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="React\Manifest.dnn" />
-    <None Include="ReactDOM\Manifest.dnn" />
-    <None Include="R7.Dnn.JavaScriptLibraries.csproj" />
-    <None Include="BuildSettings.targets" />
-    <None Include="packages.config" />
-    <None Include="React\Build.targets" />
-    <None Include="InstallPackage.targets" />
-    <None Include="ReactDOM\Build.targets" />
-    <None Include="BlueimpGallery\Manifest.dnn" />
-    <None Include="BlueimpGallery\Build.targets" />
-    <None Include="jQueryBlueimpGallery\Build.targets" />
-    <None Include="jQueryBlueimpGallery\Manifest.dnn" />
-    <None Include="Lightbox2\Build.targets" />
-    <None Include="Lightbox2\Manifest.dnn" />
-    <None Include="Colorbox\Build.targets" />
-    <None Include="Colorbox\Manifest.dnn" />
-    <None Include="Rangy\Build.targets" />
-    <None Include="Rangy\Manifest.dnn" />
-    <None Include="LazyAds\Build.targets" />
-    <None Include="LazyAds\Manifest.dnn" />
-  </ItemGroup>
-  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+
   <Import Project="BlueimpGallery/Build.targets" />
   <Import Project="jQueryBlueimpGallery/Build.targets" />
   <Import Project="Lightbox2/Build.targets" />
@@ -73,5 +16,7 @@
   <Import Project="ReactDOM/Build.targets" />
   <Import Project="Rangy/Build.targets" />
   <Import Project="LazyAds/Build.targets" />
-  <Target Name="AfterBuild" DependsOnTargets="BlueimpGallery;jQueryBlueimpGallery;Lightbox2;Colorbox;React;ReactDOM;Rangy;LazyAds" />
+  <Target Name="MakePackages" AfterTargets="Build" DependsOnTargets="BlueimpGallery;jQueryBlueimpGallery;Lightbox2;Colorbox;React;ReactDOM;Rangy;LazyAds" />
+	
 </Project>
+
