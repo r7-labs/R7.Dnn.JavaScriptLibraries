@@ -1,20 +1,21 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0" DefaultTargets="Lightbox2">
-    <PropertyGroup>
-		<PackageName>Lightbox2</PackageName>
-		<IncludeBasePath>$(MSBuildProjectDirectory)/../../node_modules/lightbox2/dist</IncludeBasePath>
-    </PropertyGroup>
-	<ItemGroup>
-        <InstallIncludeFiles Include="$(IncludeBasePath)\**\*.min.js" />
-		<InstallIncludeFiles Include="$(IncludeBasePath)\**\*.min.css" />
-		<InstallIncludeFiles Include="$(IncludeBasePath)\**\*.png" />
-        <InstallIncludeFiles Include="$(IncludeBasePath)\..\*.json" />
-        <InstallIncludeFiles Include="$(IncludeBasePath)\..\LICENSE" />
-        <InstallIncludeFiles Include="$(IncludeBasePath)\..\*.md" />
-    </ItemGroup>
 	<Import Project="../BuildSettings.targets" Condition=" '$(BuildSettingsImported)' == '' " />
-	<Import Project="../InstallPackage.targets" Condition=" '$(InstallPackageImported)' == '' " />
 	<Target Name="Lightbox2">
-	    <CallTarget Targets="InstallPackage" />
+		<PropertyGroup>
+			<PackageName>Lightbox2</PackageName>
+			<IncludeBasePath>$(MSBuildProjectDirectory)/../node_modules/lightbox2/dist</IncludeBasePath>
+		</PropertyGroup>
+		<ItemGroup>
+			<Lightbox2IncludeFiles Include="$(IncludeBasePath)/**/*.min.js" />
+			<Lightbox2IncludeFiles Include="$(IncludeBasePath)/**/*.min.css" />
+			<Lightbox2IncludeFiles Include="$(IncludeBasePath)/**/*.png" />
+			<Lightbox2IncludeFiles Include="$(IncludeBasePath)/../*.json" />
+			<Lightbox2IncludeFiles Include="$(IncludeBasePath)/../LICENSE" />
+			<Lightbox2IncludeFiles Include="$(IncludeBasePath)/../*.md" />
+		</ItemGroup>
+		<RemoveDir Directories="$(TmpDir)" />
+		<Copy SourceFiles="@(Lightbox2IncludeFiles)" DestinationFolder="$(TmpDir)/Resources/%(RecursiveDir)" />
+		<MSBuild Projects="$(MSBuildProjectDirectory)/InstallPackage.targets" Targets="InstallPackage" Properties="PackageName=$(PackageName)" />
 	</Target>
 </Project>

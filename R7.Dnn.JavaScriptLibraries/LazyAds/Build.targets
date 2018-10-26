@@ -1,18 +1,19 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0" DefaultTargets="LazyAds">
-    <PropertyGroup>
-		<PackageName>LazyAds</PackageName>
-        <IncludeBasePath>$(MSBuildProjectDirectory)/../../node_modules/lazyad-loader</IncludeBasePath>
-    </PropertyGroup>
-	<ItemGroup>
-        <InstallIncludeFiles Include="$(IncludeBasePath)/dist/*.min.js" />
-        <InstallIncludeFiles Include="$(IncludeBasePath)/*.json" />
-        <InstallIncludeFiles Include="$(IncludeBasePath)/LICENSE" />
-        <InstallIncludeFiles Include="$(IncludeBasePath)/*.md" />
-    </ItemGroup>
 	<Import Project="../BuildSettings.targets" Condition=" '$(BuildSettingsImported)' == '' " />
-	<Import Project="../InstallPackage.targets" Condition=" '$(InstallPackageImported)' == '' " />
 	<Target Name="LazyAds">
-	    <CallTarget Targets="InstallPackage" />
+		<PropertyGroup>
+			<PackageName>LazyAds</PackageName>
+			<IncludeBasePath>$(MSBuildProjectDirectory)/../node_modules/lazyad-loader</IncludeBasePath>
+		</PropertyGroup>
+		<ItemGroup>
+			<LazyAdsIncludeFiles Include="$(IncludeBasePath)/dist/*.min.js" />
+			<LazyAdsIncludeFiles Include="$(IncludeBasePath)/*.json" />
+			<LazyAdsIncludeFiles Include="$(IncludeBasePath)/LICENSE" />
+			<LazyAdsIncludeFiles Include="$(IncludeBasePath)/*.md" />
+		</ItemGroup>
+		<RemoveDir Directories="$(TmpDir)" />
+		<Copy SourceFiles="@(LazyAdsIncludeFiles)" DestinationFolder="$(TmpDir)/Resources/%(RecursiveDir)" />
+		<MSBuild Projects="$(MSBuildProjectDirectory)/InstallPackage.targets" Targets="InstallPackage" Properties="PackageName=$(PackageName)" />
 	</Target>
 </Project>

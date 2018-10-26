@@ -1,23 +1,24 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0" DefaultTargets="BlueimpGallery">
-    <PropertyGroup>
-		<PackageName>BlueimpGallery</PackageName>
-		<IncludeBasePath>$(MSBuildProjectDirectory)/../../node_modules/blueimp-gallery</IncludeBasePath>
-    </PropertyGroup>
-	<ItemGroup>
-        <InstallIncludeFiles Include="$(IncludeBasePath)\**\*.min.js" />
-		<InstallIncludeFiles Include="$(IncludeBasePath)\**\*.min.js.map" />
-		<InstallIncludeFiles Include="$(IncludeBasePath)\**\*.min.css" />
-		<InstallIncludeFiles Include="$(IncludeBasePath)\**\*.min.css.map" />
-		<InstallIncludeFiles Include="$(IncludeBasePath)\**\*.png" />
-		<InstallIncludeFiles Include="$(IncludeBasePath)\**\*.svg" />
-        <InstallIncludeFiles Include="$(IncludeBasePath)\*.json" />
-        <InstallIncludeFiles Include="$(IncludeBasePath)\*.txt" />
-        <InstallIncludeFiles Include="$(IncludeBasePath)\*.md" />
-    </ItemGroup>
 	<Import Project="../BuildSettings.targets" Condition=" '$(BuildSettingsImported)' == '' " />
-	<Import Project="../InstallPackage.targets" Condition=" '$(InstallPackageImported)' == '' " />
 	<Target Name="BlueimpGallery">
-	    <CallTarget Targets="InstallPackage" />
+		<PropertyGroup>
+			<PackageName>BlueimpGallery</PackageName>
+			<IncludeBasePath>$(MSBuildProjectDirectory)/../node_modules/blueimp-gallery</IncludeBasePath>
+		</PropertyGroup>
+		<ItemGroup>
+			<BlueimpGalleryIncludeFiles Include="$(IncludeBasePath)/**/*.min.js" />
+			<BlueimpGalleryIncludeFiles Include="$(IncludeBasePath)/**/*.min.js.map" />
+			<BlueimpGalleryIncludeFiles Include="$(IncludeBasePath)/**/*.min.css" />
+			<BlueimpGalleryIncludeFiles Include="$(IncludeBasePath)/**/*.min.css.map" />
+			<BlueimpGalleryIncludeFiles Include="$(IncludeBasePath)/**/*.png" />
+			<BlueimpGalleryIncludeFiles Include="$(IncludeBasePath)/**/*.svg" />
+			<BlueimpGalleryIncludeFiles Include="$(IncludeBasePath)/*.json" />
+			<BlueimpGalleryIncludeFiles Include="$(IncludeBasePath)/*.txt" />
+			<BlueimpGalleryIncludeFiles Include="$(IncludeBasePath)/*.md" />
+		</ItemGroup>
+		<RemoveDir Directories="$(TmpDir)" />
+		<Copy SourceFiles="@(BlueimpGalleryIncludeFiles)" DestinationFolder="$(TmpDir)/Resources/%(RecursiveDir)" />
+		<MSBuild Projects="$(MSBuildProjectDirectory)/InstallPackage.targets" Targets="InstallPackage" Properties="PackageName=$(PackageName)" />
 	</Target>
 </Project>

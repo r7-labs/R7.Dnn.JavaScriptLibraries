@@ -1,17 +1,19 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0" DefaultTargets="React">
-    <PropertyGroup>
-		<PackageName>React</PackageName>
-    </PropertyGroup>
-	<ItemGroup>
-        <InstallIncludeFiles Include="$(MSBuildProjectDirectory)/../../node_modules/react/dist/*.min.js" />
-        <InstallIncludeFiles Include="$(MSBuildProjectDirectory)/../../node_modules/react/*.json" />
-        <InstallIncludeFiles Include="$(MSBuildProjectDirectory)/../../node_modules/react/LICENSE" />
-        <InstallIncludeFiles Include="$(MSBuildProjectDirectory)/../../node_modules/react/*.md" />
-    </ItemGroup>
 	<Import Project="../BuildSettings.targets" Condition=" '$(BuildSettingsImported)' == '' " />
-	<Import Project="../InstallPackage.targets" Condition=" '$(InstallPackageImported)' == '' " />
 	<Target Name="React">
-	    <CallTarget Targets="InstallPackage" />
+		<PropertyGroup>
+			<PackageName>React</PackageName>
+			<IncludeBasePath>$(MSBuildProjectDirectory)/../node_modules/react</IncludeBasePath>
+		</PropertyGroup>
+		<ItemGroup>
+			<ReactIncludeFiles Include="$(IncludeBasePath)/dist/*.min.js" />
+			<ReactIncludeFiles Include="$(IncludeBasePath)/*.json" />
+			<ReactIncludeFiles Include="$(IncludeBasePath)/LICENSE" />
+			<ReactIncludeFiles Include="$(IncludeBasePath)/*.md" />
+		</ItemGroup>
+		<RemoveDir Directories="$(TmpDir)" />
+		<Copy SourceFiles="@(ReactIncludeFiles)" DestinationFolder="$(TmpDir)/Resources/%(RecursiveDir)" />
+		<MSBuild Projects="$(MSBuildProjectDirectory)/InstallPackage.targets" Targets="InstallPackage" Properties="PackageName=$(PackageName)" />
 	</Target>
 </Project>

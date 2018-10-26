@@ -1,14 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0" DefaultTargets="InstallPackage">
+   <Import Project="BuildSettings.targets" Condition=" '$(BuildSettingsImported)' == '' " />
    <PropertyGroup>
         <InstallPackageImported>true</InstallPackageImported>
     </PropertyGroup>
-    <Target Name="InstallPackage">
-		<!-- Remove tmp directory (if previous build failed) -->
-        <RemoveDir Directories="$(TmpDir)" />
-
+	<Target Name="InstallPackage">
 		<!-- Read package version from the manifest -->
-        <XmlPeek Query="/dotnetnuke/packages/package[1]/@version" XmlInputPath="Manifest.dnn">
+		<XmlPeek Query="/dotnetnuke/packages/package[1]/@version" XmlInputPath="$(MSBuildProjectDirectory)/$(PackageName)/Manifest.dnn">
             <Output TaskParameter="Result" PropertyName="Version" />
         </XmlPeek>
 		<PropertyGroup>
@@ -17,19 +15,19 @@
 
 		<!-- Declare manifest files -->
 		<ItemGroup>
-			<InstallManifestFiles Include="Manifest.dnn" />
+			<InstallManifestFiles Include="$(MSBuildProjectDirectory)/$(PackageName)/Manifest.dnn" />
 		</ItemGroup>
-		
-		<!-- Apply excluded files filters -->
-        <ItemGroup>
-            <InstallFilteredFiles Include="@(InstallIncludeFiles)" Exclude="@(InstallExcludeFiles)" />
-        </ItemGroup>
 
 		<!-- Copy manifest files to tmp dir -->
         <Copy SourceFiles="@(InstallManifestFiles)" DestinationFolder="$(TmpDir)/Package" />
 
-		<!-- Copy filtered Resource files to tmp/Resources dir -->
-        <Copy SourceFiles="@(InstallFilteredFiles)" DestinationFolder="$(TmpDir)/Resources/%(RecursiveDir)" />
+		<!-- FIXME: Passing ItemGroup having "**" in paths via property leads to loosing directory structure info -->
+		<!-- Apply excluded files filters and copy filtered files to tmp/Resources dir
+        <ItemGroup>
+            <InstallFilteredFiles Include="@(InstallIncludeFiles)" Exclude="@(InstallExcludeFiles)" />
+        </ItemGroup>
+		<Copy SourceFiles="@(InstallFilteredFiles)" DestinationFolder="$(TmpDir)/Resources/%(RecursiveDir)" />
+		-->
        
         <!-- Declare files to zip -->
         <ItemGroup>
@@ -37,7 +35,7 @@
         </ItemGroup>
               
         <!-- Create Resources.zip -->
-        <Zip Condition=" '$(OS)' != 'Unix' " Files="@(InstallResourceZipFiles)" WorkingDirectory="$(MSBuildProjectDirectory)\tmp\Resources" ZipFileName="$(TmpDir)/Resources/Resources.zip" />
+        <Zip Condition=" '$(OS)' != 'Unix' " Files="@(InstallResourceZipFiles)" WorkingDirectory="$(TmpDir)/Resources" ZipFileName="$(TmpDir)/Resources/Resources.zip" />
         <Exec Condition=" '$(OS)' == 'Unix' " Command="zip -r -6 -UN=UTF8 &quot;Resources.zip&quot; ." WorkingDirectory="$(TmpDir)/Resources" />
 
 		<!-- Move Resources.zip to tmp/Package dir -->
@@ -50,7 +48,7 @@
         </ItemGroup>
 		
         <!-- Create the install package -->
-        <Zip Condition=" '$(OS)' != 'Unix' " Files="@(InstallPackageFiles)" WorkingDirectory="$(MSBuildProjectDirectory)\tmp\Package" ZipFileName="$(TmpDir)/Package/$(PackageFileName)" />
+        <Zip Condition=" '$(OS)' != 'Unix' " Files="@(InstallPackageFiles)" WorkingDirectory="$(TmpDir)/Package" ZipFileName="$(TmpDir)/Package/$(PackageFileName)" />
         <Exec Condition=" '$(OS)' == 'Unix' " Command="zip -r -6 -UN=UTF8 &quot;$(PackageFileName)&quot; ." WorkingDirectory="$(TmpDir)/Package" />
 
 		<!-- Move the install package to the output directory -->
