@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0" DefaultTargets="Select2">
+	<Import Project="../BuildSettings.targets" Condition=" '$(BuildSettingsImported)' == '' " />
+	<Target Name="Select2">
+		<PropertyGroup>
+			<PackageName>Select2</PackageName>
+			<IncludeBasePath>$(MSBuildProjectDirectory)/../node_modules/select2</IncludeBasePath>
+		</PropertyGroup>
+		<ItemGroup>
+			<Select2IncludeFiles Include="$(IncludeBasePath)/dist/**/*.min.js" />
+			<Select2IncludeFiles Include="$(IncludeBasePath)/dist/**/*.min.css" />
+			<Select2IncludeFiles Include="$(IncludeBasePath)/*.json" />
+			<Select2IncludeFiles Include="$(IncludeBasePath)/*.md" />
+		</ItemGroup>
+		<RemoveDir Directories="$(TmpDir)" />
+		<Copy SourceFiles="@(Select2IncludeFiles)" DestinationFolder="$(TmpDir)/Resources/%(RecursiveDir)" />
+		<MSBuild Projects="$(MSBuildProjectDirectory)/InstallPackage.targets" Targets="InstallPackage" Properties="PackageName=$(PackageName)" />
+	</Target>
+</Project>
