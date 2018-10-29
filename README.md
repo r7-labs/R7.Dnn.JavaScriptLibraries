@@ -11,9 +11,9 @@ it won't allow you to reference other files (namely secondary scripts and CSS) w
 In this case, you could use generic [DNN Client API](https://www.dnnsoftware.com/wiki/client-resource-management-api) to reference such resources.
 This approach have evident flaws, but could be still useful is some cases:
 
-```ASP.NET
+```asp
 <%@ Register TagPrefix="dnn" Namespace="DotNetNuke.Web.Client.ClientResourceManagement" Assembly="DotNetNuke.Web.Client" %>
 
-<dnn:DnnJsInclude runat="server" FilePath="/Resources/Libraries/BlueimpGallery/02_33_00/js/jquery.blueimp-gallery.min.js" />
-<dnn:DnnCssInclude runat="server" FilePath="/Resources/Libraries/BlueimpGallery/02_33_00/css/blueimp-gallery-video.css" />
+<dnn:DnnJsInclude runat="server" FilePath="~/Resources/Libraries/BlueimpGallery/02_33_00/js/jquery.blueimp-gallery.min.js" />
+<dnn:DnnCssInclude runat="server" FilePath="~/Resources/Libraries/BlueimpGallery/02_33_00/css/blueimp-gallery-video.css" />
 ```
