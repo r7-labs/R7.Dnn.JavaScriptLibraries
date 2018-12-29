@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<dotnetnuke type="Package" version="5.0">
+	<packages>
+		<package name="jQuery-Snowfall" type="JavaScript_Library" version="01.07.04">
+			<friendlyName>jQuery-Snowfall JavaScript Library</friendlyName>
+			<description>Makes it snow on any web page or specific element.</description>
+			<owner>
+				<name>loktar00</name>
+				<organization>http://loktar00.github.io</organization>
+				<url>https://github.com/loktar00/JQuery-Snowfall</url>
+				<email></email>
+			</owner>
+			<license></license>
+			<releaseNotes>https://github.com/loktar00/JQuery-Snowfall/releases/tag/1.7.4</releaseNotes>
+			<components>
+				<component type="JavaScript_Library">
+					<javaScriptLibrary>
+						<libraryName>jQuery-Snowfall</libraryName>
+						<fileName>snowfall.jquery.min.js</fileName>
+						<preferredScriptLocation>BodyBottom</preferredScriptLocation>
+						<CDNPath>https://cdnjs.cloudflare.com/ajax/libs/JQuery-Snowfall/1.7.4/snowfall.jquery.min.js</CDNPath>
+						<objectName>snowFall</objectName>
+					</javaScriptLibrary>
+				</component>
+                <component type="ResourceFile">
+					<resourceFiles>
+						<basePath>Resources\Libraries\jQuery-Snowfall\01_07_04</basePath>
+						<resourceFile>
+							<name>Resources.zip</name>
+						</resourceFile>
+					</resourceFiles>
+				</component>
+			</components>
+		</package>
+	</packages>
+</dotnetnuke>

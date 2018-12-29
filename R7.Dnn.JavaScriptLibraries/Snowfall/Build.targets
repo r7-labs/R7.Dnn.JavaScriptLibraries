@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0" DefaultTargets="Snowfall">
+	<Import Project="../BuildSettings.targets" Condition=" '$(BuildSettingsImported)' == '' " />
+	<Target Name="Snowfall">
+		<PropertyGroup>
+			<PackageName>Snowfall</PackageName>
+			<IncludeBasePath>$(MSBuildProjectDirectory)/../bower_components/jquery-snowfall</IncludeBasePath>
+		</PropertyGroup>
+		<ItemGroup>
+			<SnowfallIncludeFiles Include="$(IncludeBasePath)/dist/**/*.min.js" />
+			<SnowfallIncludeFiles Include="$(IncludeBasePath)/*.json" />
+			<SnowfallIncludeFiles Include="$(IncludeBasePath)/*.md" />
+		</ItemGroup>
+		<RemoveDir Directories="$(TmpDir)" />
+		<Copy SourceFiles="@(SnowfallIncludeFiles)" DestinationFolder="$(TmpDir)/Resources/%(RecursiveDir)" />
+		<MSBuild Projects="$(MSBuildProjectDirectory)/InstallPackage.targets" Targets="InstallPackage" Properties="PackageName=$(PackageName)" />
+	</Target>
+</Project>
