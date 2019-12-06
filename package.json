@@ -1,12 +1,12 @@
 {
   "name": "r7.dnn.javascriptlibraries",
   "devDependencies": {
-    "blueimp-gallery": "^2.33.0",
-    "jquery-colorbox": "^1.6.4",
-    "lazy-ads": "^1.1.12",
-    "lightbox2": "^2.9.0",
-    "react": "^16.6.0",
-    "react-dom": "^16.6.0",
-    "select2": "^4.0.6-rc.1"
+    "blueimp-gallery": "2.33.0",
+    "jquery-colorbox": "1.6.4",
+    "lazy-ads": "1.1.12",
+    "lightbox2": "2.9.0",
+    "react": "16.6.0",
+    "react-dom": "16.6.0",
+    "select2": "4.0.6-rc.1"
   }
 }
