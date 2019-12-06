@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <dotnetnuke type="Package" version="5.0">
 	<packages>
-		<package name="Select2" type="JavaScript_Library" version="04.00.06">
+		<package name="Select2" type="JavaScript_Library" version="04.00.12">
 			<friendlyName>Select2 JavaScript Library</friendlyName>
 			<description>A jQuery based replacement for select boxes. It supports searching, remote data sets, and infinite scrolling of results.</description>
 			<owner>
@@ -11,20 +11,20 @@
 				<email></email>
 			</owner>
 			<license>https://github.com/select2/select2/blob/develop/LICENSE.md</license>
-			<releaseNotes>https://github.com/select2/select2/releases/tag/4.0.6-rc.1</releaseNotes>
+			<releaseNotes>https://github.com/select2/select2/releases/tag/4.0.12</releaseNotes>
 			<components>
 				<component type="JavaScript_Library">
 					<javaScriptLibrary>
 						<libraryName>Select2</libraryName>
 						<fileName>js/select2.full.min.js</fileName>
 						<preferredScriptLocation>PageHead</preferredScriptLocation>
-						<CDNPath>https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.1/js/select2.min.js</CDNPath>
+						<CDNPath>https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.12/js/select2.min.js</CDNPath>
 						<objectName>select2</objectName>
 					</javaScriptLibrary>
 				</component>
                 <component type="ResourceFile">
 					<resourceFiles>
-						<basePath>Resources\Libraries\Select2\04_00_06</basePath>
+						<basePath>Resources\Libraries\Select2\04_00_12</basePath>
 						<resourceFile>
 							<name>Resources.zip</name>
 						</resourceFile>

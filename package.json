@@ -7,6 +7,6 @@
     "lightbox2": "2.9.0",
     "react": "16.6.0",
     "react-dom": "16.6.0",
-    "select2": "4.0.6-rc.1"
+    "select2": "4.0.12"
   }
 }
