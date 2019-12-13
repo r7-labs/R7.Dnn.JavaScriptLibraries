@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0" DefaultTargets="FontAwesome">
+	<Import Project="../BuildSettings.targets" Condition=" '$(BuildSettingsImported)' == '' " />
+	<Target Name="FontAwesome">
+		<PropertyGroup>
+			<PackageName>FontAwesome</PackageName>
+			<IncludeBasePath>$(MSBuildProjectDirectory)/../node_modules/@fortawesome/fontawesome-free</IncludeBasePath>
+		</PropertyGroup>
+		<ItemGroup>
+			<FontAwesomeIncludeFiles Include="$(IncludeBasePath)/**/*.min.js" />
+			<FontAwesomeIncludeFiles Include="$(IncludeBasePath)/**/*.min.js.map" />
+			<FontAwesomeIncludeFiles Include="$(IncludeBasePath)/**/*.min.css" />
+			<FontAwesomeIncludeFiles Include="$(IncludeBasePath)/**/*.min.css.map" />
+			<FontAwesomeIncludeFiles Include="$(IncludeBasePath)/**/*.svg" />
+			<FontAwesomeIncludeFiles Include="$(IncludeBasePath)/**/*.ttf" />
+			<FontAwesomeIncludeFiles Include="$(IncludeBasePath)/**/*.eot" />
+			<FontAwesomeIncludeFiles Include="$(IncludeBasePath)/**/*.woff" />
+			<FontAwesomeIncludeFiles Include="$(IncludeBasePath)/**/*.woff2" />
+			<FontAwesomeIncludeFiles Include="$(IncludeBasePath)/*.json" />
+			<FontAwesomeIncludeFiles Include="$(IncludeBasePath)/*.txt" />
+		</ItemGroup>
+		<RemoveDir Directories="$(TmpDir)" />
+		<Copy SourceFiles="@(FontAwesomeIncludeFiles)" DestinationFolder="$(TmpDir)/Resources/%(RecursiveDir)" />
+		<MSBuild Projects="$(MSBuildProjectDirectory)/InstallPackage.targets" Targets="InstallPackage" Properties="PackageName=$(PackageName)" />
+	</Target>
+</Project>

@@ -12,6 +12,9 @@
     <None Include="R7.Dnn.JavaScriptLibraries.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="FontAwesome\" />
+  </ItemGroup>
   <Import Project="BlueimpGallery/Build.targets" />
   <Import Project="Lightbox2/Build.targets" />
   <Import Project="Colorbox/Build.targets" />
@@ -21,7 +24,8 @@
   <Import Project="LazyAds/Build.targets" />
   <Import Project="Select2/Build.targets" />
   <Import Project="Snowfall/Build.targets" />
-  <Target Name="MakePackages" AfterTargets="Build" DependsOnTargets="BlueimpGallery;Lightbox2;Colorbox;React;ReactDOM;Rangy;LazyAds;Select2;Snowfall" />
+  <Import Project="FontAwesome/Build.targets" />
+  <Target Name="MakePackages" AfterTargets="Build" DependsOnTargets="BlueimpGallery;Lightbox2;Colorbox;React;ReactDOM;Rangy;LazyAds;Select2;Snowfall;FontAwesome" />
 	
 </Project>
 
