@@ -18,7 +18,7 @@
 						<libraryName>Select2</libraryName>
 						<fileName>js/select2.full.min.js</fileName>
 						<preferredScriptLocation>PageHead</preferredScriptLocation>
-						<CDNPath>https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js</CDNPath>
+						<CDNPath>https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js</CDNPath>
 						<objectName>select2</objectName>
 					</javaScriptLibrary>
 				</component>
