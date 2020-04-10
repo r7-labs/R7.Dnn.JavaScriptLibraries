@@ -19,7 +19,7 @@
 						<fileName>react-redux.min.js</fileName>
 						<preferredScriptLocation>PageHead</preferredScriptLocation>
 						<CDNPath>https://cdnjs.cloudflare.com/ajax/libs/react-redux/7.2.0/react-redux.min.js</CDNPath>
-						<objectName>createStore</objectName>
+						<objectName>Provider</objectName>
 					</javaScriptLibrary>
 				</component>
                 <component type="ResourceFile">
