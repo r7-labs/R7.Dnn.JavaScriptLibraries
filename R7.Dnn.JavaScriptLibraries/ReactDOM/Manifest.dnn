@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <dotnetnuke type="Package" version="5.0">
 	<packages>
-		<package name="ReactDOM" type="JavaScript_Library" version="16.06.00">
+		<package name="ReactDOM" type="JavaScript_Library" version="16.13.01">
 			<friendlyName>ReactDOM JavaScript Library</friendlyName>
 			<description>A JavaScript library for building user interfaces.</description>
 			<owner>
@@ -11,20 +11,20 @@
 				<email />
 			</owner>
 			<license>https://github.com/facebook/react/blob/master/LICENSE</license>
-			<releaseNotes>https://github.com/facebook/react/releases/tag/v16.6.0</releaseNotes>
+			<releaseNotes>https://github.com/facebook/react/releases/tag/v16.13.1</releaseNotes>
 			<components>
 				<component type="JavaScript_Library">
 					<javaScriptLibrary>
 						<libraryName>ReactDOM</libraryName>
 						<fileName>react-dom.production.min.js</fileName>
 						<preferredScriptLocation>PageHead</preferredScriptLocation>
-						<CDNPath>https://unpkg.com/react-dom@16.6.0/cjs/react-dom.production.min.js</CDNPath>
+						<CDNPath>https://unpkg.com/react-dom@16.13.1/cjs/react-dom.production.min.js</CDNPath>
 						<objectName>ReactDOM</objectName>
 					</javaScriptLibrary>
 				</component>
                 <component type="ResourceFile">
 					<resourceFiles>
-						<basePath>Resources\Libraries\ReactDOM\16_06_00</basePath>
+						<basePath>Resources\Libraries\ReactDOM\16_13_01</basePath>
 						<resourceFile>
 							<name>Resources.zip</name>
 						</resourceFile>
