@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<dotnetnuke type="Package" version="5.0">
+	<packages>
+		<package name="ReactRedux" type="JavaScript_Library" version="07.02.00">
+			<friendlyName>React-Redux JavaScript Library</friendlyName>
+			<description>Official React bindings for Redux.</description>
+			<owner>
+				<name />
+				<organization>Redux</organization>
+				<url>https://react-redux.js.org/</url>
+				<email />
+			</owner>
+			<license>https://github.com/reduxjs/react-redux/blob/master/LICENSE.md</license>
+			<releaseNotes>https://github.com/reduxjs/react-redux/releases/tag/v7.2.0</releaseNotes>
+			<components>
+				<component type="JavaScript_Library">
+					<javaScriptLibrary>
+						<libraryName>ReactRedux</libraryName>
+						<fileName>react-redux.min.js</fileName>
+						<preferredScriptLocation>PageHead</preferredScriptLocation>
+						<CDNPath>https://cdnjs.cloudflare.com/ajax/libs/react-redux/7.2.0/react-redux.min.js</CDNPath>
+						<objectName>createStore</objectName>
+					</javaScriptLibrary>
+				</component>
+                <component type="ResourceFile">
+					<resourceFiles>
+						<basePath>Resources\Libraries\Redux\07_02_00</basePath>
+						<resourceFile>
+							<name>Resources.zip</name>
+						</resourceFile>
+					</resourceFiles>
+				</component>
+			</components>
+		</package>
+	</packages>
+</dotnetnuke>

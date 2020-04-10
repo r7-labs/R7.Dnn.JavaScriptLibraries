@@ -15,6 +15,7 @@
   <ItemGroup>
     <Folder Include="FontAwesome\" />
     <Folder Include="Redux\" />
+    <Folder Include="ReactRedux\" />
   </ItemGroup>
   <Import Project="BlueimpGallery/Build.targets" />
   <Import Project="Lightbox2/Build.targets" />
@@ -22,12 +23,13 @@
   <Import Project="React/Build.targets" />
   <Import Project="ReactDOM/Build.targets" />
   <Import Project="Redux/Build.targets" />
+  <Import Project="ReactRedux/Build.targets" />
   <Import Project="Rangy/Build.targets" />
   <Import Project="LazyAds/Build.targets" />
   <Import Project="Select2/Build.targets" />
   <Import Project="Snowfall/Build.targets" />
   <Import Project="FontAwesome/Build.targets" />
-  <Target Name="MakePackages" AfterTargets="Build" DependsOnTargets="BlueimpGallery;Lightbox2;Colorbox;React;ReactDOM;Redux;Rangy;LazyAds;Select2;Snowfall;FontAwesome" />
+  <Target Name="MakePackages" AfterTargets="Build" DependsOnTargets="BlueimpGallery;Lightbox2;Colorbox;React;ReactDOM;Redux;ReactRedux;Rangy;LazyAds;Select2;Snowfall;FontAwesome" />
 	
 </Project>
 
