@@ -24,7 +24,7 @@
 				</component>
                 <component type="ResourceFile">
 					<resourceFiles>
-						<basePath>Resources\Libraries\React\16.13.01</basePath>
+						<basePath>Resources\Libraries\React\16_13_01</basePath>
 						<resourceFile>
 							<name>Resources.zip</name>
 						</resourceFile>

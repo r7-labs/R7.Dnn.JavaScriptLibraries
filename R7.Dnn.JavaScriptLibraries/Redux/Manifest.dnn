@@ -24,7 +24,7 @@
 				</component>
                 <component type="ResourceFile">
 					<resourceFiles>
-						<basePath>Resources\Libraries\Redux\04.00.05</basePath>
+						<basePath>Resources\Libraries\Redux\04_00_05</basePath>
 						<resourceFile>
 							<name>Resources.zip</name>
 						</resourceFile>
