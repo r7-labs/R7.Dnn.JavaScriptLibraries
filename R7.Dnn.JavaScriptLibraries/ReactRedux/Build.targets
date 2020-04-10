@@ -3,7 +3,7 @@
 	<Import Project="../BuildSettings.targets" Condition=" '$(BuildSettingsImported)' == '' " />
 	<Target Name="ReactRedux">
 		<PropertyGroup>
-			<PackageName>React-Redux</PackageName>
+			<PackageName>ReactRedux</PackageName>
 			<IncludeBasePath>$(MSBuildProjectDirectory)/../node_modules/react-redux</IncludeBasePath>
 		</PropertyGroup>
 		<ItemGroup>
