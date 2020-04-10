@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<dotnetnuke type="Package" version="5.0">
+	<packages>
+		<package name="Redux" type="JavaScript_Library" version="04.00.05">
+			<friendlyName>Redux JavaScript Library</friendlyName>
+			<description>Predictable state container for JavaScript apps.</description>
+			<owner>
+				<name />
+				<organization>Redux</organization>
+				<url>https://redux.js.org/</url>
+				<email />
+			</owner>
+			<license>https://github.com/reduxjs/redux/blob/master/LICENSE.md</license>
+			<releaseNotes>https://github.com/reduxjs/redux/releases/tag/v4.0.5</releaseNotes>
+			<components>
+				<component type="JavaScript_Library">
+					<javaScriptLibrary>
+						<libraryName>Redux</libraryName>
+						<fileName>redux.min.js</fileName>
+						<preferredScriptLocation>PageHead</preferredScriptLocation>
+						<CDNPath>https://cdnjs.cloudflare.com/ajax/libs/redux/4.0.5/redux.min.js</CDNPath>
+						<objectName>createStore</objectName>
+					</javaScriptLibrary>
+				</component>
+                <component type="ResourceFile">
+					<resourceFiles>
+						<basePath>Resources\Libraries\Redux\04.00.05</basePath>
+						<resourceFile>
+							<name>Resources.zip</name>
+						</resourceFile>
+					</resourceFiles>
+				</component>
+			</components>
+		</package>
+	</packages>
+</dotnetnuke>
