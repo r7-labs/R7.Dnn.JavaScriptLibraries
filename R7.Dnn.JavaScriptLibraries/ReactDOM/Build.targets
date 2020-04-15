@@ -7,7 +7,7 @@
 			<IncludeBasePath>$(MSBuildProjectDirectory)/../node_modules/react-dom</IncludeBasePath>
 		</PropertyGroup>
 		<ItemGroup>
-			<ReactDOMIncludeFiles Include="$(IncludeBasePath)/cjs/*.js" />
+			<ReactDOMIncludeFiles Include="$(IncludeBasePath)/umd/*.js" />
 			<ReactDOMIncludeFiles Include="$(IncludeBasePath)/*.json" />
 			<ReactDOMIncludeFiles Include="$(IncludeBasePath)/LICENSE" />
 			<ReactDOMIncludeFiles Include="$(IncludeBasePath)/*.md" />

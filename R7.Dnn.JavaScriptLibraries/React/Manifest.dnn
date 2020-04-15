@@ -18,7 +18,7 @@
 						<libraryName>React</libraryName>
 						<fileName>react.production.min.js</fileName>
 						<preferredScriptLocation>PageHead</preferredScriptLocation>
-						<CDNPath>https://unpkg.com/react@16.13.1/cjs/react.production.min.js</CDNPath>
+						<CDNPath>https://unpkg.com/react@16.13.1/umd/react.production.min.js</CDNPath>
 						<objectName>React</objectName>
 					</javaScriptLibrary>
 				</component>
